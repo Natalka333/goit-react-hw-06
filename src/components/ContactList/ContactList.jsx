@@ -6,10 +6,10 @@ import css from './ContactList.module.css'
 
 
 const ContactList = () => {
-    const contacts = useSelector(state => state.contacts.items);
-    const filter = useSelector(state => state.filter);
+    const selectContacts = useSelector(state => state.contacts.items);
+    const selectNameFilter = useSelector(state => state.filter);
 
-    const filterContacts = contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())
+    const filterContacts = selectContacts.filter((contact) => contact.name.toLowerCase().includes(selectNameFilter.toLowerCase())
     );
 
     return (
